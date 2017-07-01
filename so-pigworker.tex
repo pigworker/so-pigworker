@@ -1,0 +1,440 @@
+\documentclass{book}
+\usepackage{a4wide}
+\usepackage{palatino}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\DeclareUnicodeCharacter{220F}{\ensuremath{\Pi}}
+\DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
+\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
+\DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
+\DeclareUnicodeCharacter{03B5}{\ensuremath{\epsilon}}
+\DeclareUnicodeCharacter{03B6}{\ensuremath{\zeta}}
+\DeclareUnicodeCharacter{03B7}{\ensuremath{\eta}}
+\DeclareUnicodeCharacter{03B8}{\ensuremath{\theta}}
+\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
+\DeclareUnicodeCharacter{03BA}{\ensuremath{\kappa}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
+\DeclareUnicodeCharacter{03BD}{\ensuremath{\nu}}
+\DeclareUnicodeCharacter{03BE}{\ensuremath{\xi}}
+\DeclareUnicodeCharacter{03BF}{\ensuremath{\omicron}}
+\DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
+\DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}
+\DeclareUnicodeCharacter{03C2}{\ensuremath{\varsigma}}
+\DeclareUnicodeCharacter{03C3}{\ensuremath{\sigma}}
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DeclareUnicodeCharacter{03C5}{\ensuremath{\upsilon}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\phi}}
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
+\DeclareUnicodeCharacter{03C8}{\ensuremath{\psi}}
+\DeclareUnicodeCharacter{03C9}{\ensuremath{\omega}}
+\newcommand{\includegraphics}[1]{FIXME: \url{#1}}
+\renewcommand{\textrightarrow}{\ensuremath{\rightarrow}}
+
+\begin{document}
+
+\title{Perhaps Not The Answer\\
+       You Were Expecting\\
+       But You Asked For It\\ ~\\
+     (An Accidental Blook)}
+\author{Conor McBride}
+\maketitle
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Haskell Curiosities}
+
+\section{What is () in Haskell, exactly?}
+\input{latex/unit-void.tex}
+
+\section{What does () mean in Haskell?}
+\input{latex/unit-boring.tex}
+
+\section{Implement the function {\tt lines} in Haskell}
+\input{latex/lines-foldr.tex}
+
+\section{Boolean Expression evaluation (subtle type error)}
+\input{latex/bool-exp-error.tex}
+
+\section{Purely functional data structures for text editors}
+\input{latex/text-editor.tex}
+
+\section{What are some motivating examples for Cofree CoMonad in Haskell?}
+\input{latex/cofree-comonad.tex}
+
+\section{Find indices of things in lists}
+\input{latex/find-indices.tex}
+
+\section{Example of UndecidableInstances yielding nonterminating typecheck}
+\input{latex/undecidable-instances-loops.tex}
+
+\section{Why do 3 and x (which was assigned 3) have different inferred types in Haskell?}
+\input{latex/mono-rest.tex}
+
+\section{Use case for rank-3 (or higher) polymorphism?}
+\input{latex/rank-3.tex}
+
+\section{Why don't Haskell compilers facilitate deterministic memory management?}
+\input{latex/haskell-mem-man.tex}
+
+\section{How does ArrowLoop work? Also, mfix?}
+\input{latex/arrow-mfix.tex}
+
+\section{What does $\Rightarrow$ mean in a type signature?}
+\input{latex/fat-arrow.tex}
+
+\section{Haskell terminology: meaning of type vs. data type, are they synonyms?}
+\input{latex/type-vs-data.tex}
+
+\section{Can you formulate the Bubble sort as a monoid or semigroup?}
+\input{latex/bubble-monoid.tex}
+
+\section{Is this a correctly implemented mergesort in Haskell?}
+\input{latex/insert-merge.tex}
+
+\section{Haskell type system nuances (ambiguity)}
+\input{latex/show-read.tex}
+
+\section{Why does Haskell use $\to$ instead of $=$?}
+\input{latex/recorde.tex}
+
+\section{Is it possible to make a type an instance of a class if its type parameters are in the wrong order?}
+\input{latex/flip-instance.tex}
+
+\section{Why does {\tt product []} return 1?}
+\input{latex/empty-product.tex}
+
+\section{Minimum of Two Maybes}
+\input{latex/maybe-min.tex}
+
+\section{Is the equivalent of Haskell's Foldable and Traversable simply a sequence in Clojure?}
+\input{latex/traversable-sequence-clojure.tex}
+
+\section{How do you keep track of multiple properties of a string without traversing it multiple times?}
+\input{latex/newtype-list-traverse.tex}
+
+\section{Finding a leaf with value x in a binary tree}
+\input{latex/findpath.tex}
+
+\section{RankNTypes and PolyKinds (quantifier alternation issues)}
+\input{latex/rankn-explicit.tex}
+
+\section{How to write this case expression with the view pattern syntax?}
+\input{latex/view-pattern-issue.tex}
+
+\section{Recursive Type Families}
+\input{latex/recursive-type-families.tex}
+
+\section{Determine whether a value is a function in Haskell}
+\input{latex/is-function.tex}
+
+\section{Automatic Functor Instance (not)}
+\input{latex/derive-functor-gremlin.tex}
+
+\section{How do I apply the first partial function that works in Haskell?}
+\input{latex/maybe-monoid-gripe.tex}
+
+\section{`Zipping' a plain list with a nested list}
+\input{latex/trav-list-list.tex}
+
+\section{Bunched accumulations}
+\input{latex/bunch-accum.tex}
+
+\section{Functor on Phantom Type}
+\input{latex/phantom-functor.tex}
+
+\section{Creating an Interpreter (with store) in Haskell}
+\input{latex/state-interpreter.tex}
+
+\section{Existential type wrappers necessity}
+\input{latex/existential-wrappers.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Pattern Matching}
+
+\section{Algorithm for typechecking ML-like pattern matching?}
+\input{latex/pattern-matching.tex}
+
+\section{Haskell Pattern Matching}
+\input{latex/shplit-plug.tex}
+
+\section{Complex pattern matching}
+\input{latex/complex-patterns.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Recursion}
+
+\section{What are paramorphisms?}
+\input{latex/paramorphisms.tex}
+
+\section{Why can you reverse list with foldl, but not with foldr in Haskell}
+\input{latex/foldl-foldr.tex}
+
+\section{Can fold be used to create infinite lists?}
+\input{latex/fold-infinite.tex}
+
+\section{How do I give a Functor instance to a datatype built for general recursion schemes?}
+\input{latex/functor-fix.tex}
+
+\section{Are there (term-transforming) morphisms in Haskell?}
+\input{latex/term-monad.tex}
+
+\section{Is this Fibonacci sequence function recursive?}
+\input{latex/fib-pedantry.tex}
+
+\section{Can someone explain this lazy Fibonacci solution?}
+\input{latex/fibs-explain.tex}
+
+\section{Monoidal folds on fixed points}
+\input{latex/monoidal-fold-fix.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Applicative Functors}
+
+\section{N-ary tree traversal}
+\input{latex/number-tree.tex}
+
+\section{Partial application of functions and currying, how to make a better code instead of a lot of maps?}
+\input{latex/appl-not-map.tex}
+
+\section{Translating monad to applicative}
+\input{latex/monad-to-applicative.tex}
+
+\section{Applicatives compose, monads don't}
+\input{latex/applicatives-compose.tex}
+
+\section{Examples Separating Functor, Applicative and Monad}
+\input{latex/examples-K012.tex}
+
+\section{Parsec: Applicatives vs Monads}
+\input{latex/parsec-appl-monad.tex}
+
+\section{Zip with default values instead of dropping values?}
+\input{latex/padme-applicative.tex}
+
+\section{What is the 'Const' applicative functor useful for?}
+\input{latex/const-appl.tex}
+
+\section{Applicative instance for free monad}
+\input{latex/appl-free-monad.tex}
+
+\section{Examples of a monad whose Applicative part can be better optimized than the Monad part}
+\input{latex/appl-monad-ap.tex}
+
+\section{How arbitrary is the “ap” implementation for monads?}
+\input{latex/arbitrary-ap.tex}
+
+\section{Applicative without a functor (for arrays)}
+\input{latex/array-appl.tex}
+
+\section{Does this simple Haskell function already have a well-known name? (strength)}
+\input{latex/strength-sequence.tex}
+
+\section{Why is{\tt ((,) r)} a Functor that is NOT an Applicative?}
+\input{latex/no-pair-appl.tex}
+
+\section{Applicative Rewriting (for reader)}
+\input{latex/appl-rew-reader.tex}
+
+\section{Serialised Diagonalisation}
+\input{latex/serial-diag.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Monads}
+
+\section{Monads with Join instead of Bind}
+\input{latex/monad-join.tex}
+
+\section{Using return versus not using return in the list monad}
+\input{latex/return-list.tex}
+
+\section{Example showing monads don't compose}
+\input{latex/monads-dont-compose.tex}
+
+\section{The Pause monad}
+\input{latex/pause-monad.tex}
+
+\section{Haskell monad return arbitrary data type}
+\input{latex/free-btree-monad.tex}
+
+\section{Should I avoid using Monad fail?}
+\input{latex/monad-fail.tex}
+
+\section{Why isn't Kleisli an instance of Monoid?}
+\input{latex/kleisli-monoid.tex}
+
+\section{Monads at the prompt?}
+\input{latex/monad-at-prompt.tex}
+
+\section{Is this a case to use liftM?}
+\input{latex/idiom-bracket-liftm.tex}
+
+\section{Zappy colists do \emph{not} form a monad}
+\input{latex/zappy-colists-not-monad.tex}
+
+\section{Haskell io-streams and `forever` produces no output to stdout}
+\input{latex/forever-no-output.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Differential Calculus for Types}
+
+\section{Find the preceding element of an element in list}
+\input{latex/previous-element.tex}
+
+\section{Splitting a List}
+\input{latex/splitting-list.tex}
+
+\section{How to make a binary tree zipper an instance of Comonad?}
+\input{latex/btree-zipper.tex}
+
+\section{What's the {\tt absurd} function in Data.Void useful for?}
+\input{latex/absurd-useful.tex}
+
+\section{Writing cojoin or cobind for n-dimensional grids}
+\input{latex/cojoin-grids.tex}
+
+\section{Zipper Comonads, Generically}
+\input{latex/zipper-comonads.tex}
+
+\section{Traversable and zippers: necessity and sufficiency}
+\input{latex/trav-zipper.tex}
+
+\section{How to write this (funny filter) function idiomatically?}
+\input{latex/funny-filter.tex}
+
+\section{Computing a term of a list depending on all previous terms}
+\input{latex/alopegmorphism.tex}
+
+\section{Reasonable Comonad implementations (for nonempty lists)}
+\input{latex/nellist-comonads.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Dependently Typed Haskell}
+
+\section{Dependently typed language best suited to “real world” programming?}
+\input{latex/real-world-dt.tex}
+
+\section{Why not be dependently typed?}
+\input{latex/dep-haskell.tex}
+
+\section{Simple dependent type example in Haskell for Dummies. How are they useful in practice in Haskell? Why should I care about dependent types ?}
+\input{latex/hasochism-plug.tex}
+
+\section{Motivation for limitation on data kind promotion}
+\input{latex/gadt-promotion.tex}
+
+\section{What is an indexed monad?}
+\input{latex/indexed-monad.tex}
+
+\section{Why is the type system refusing my seemingly valid program?}
+\input{latex/seemingly-valid.tex}
+
+\section{Is it possible to program and check invarants in Haskell?}
+\input{latex/check-invariants.tex}
+
+\section{Why is typecase a bad thing?}
+\input{latex/typecase-bad.tex}
+
+\section{Positive integer type}
+\input{latex/positive-integer.tex}
+
+\section{Test if a value matches a constructor}
+\input{latex/match-constructor.tex}
+
+\section{Difference between Haskell and Idris: Reflection of Runtime/Compiletime in the type universes}
+\input{latex/run-compile-universes.tex}
+
+\section{Why GADT/existential data constructors cannot be used in lazy patterns?}
+\input{latex/lazy-gadt.tex}
+
+\section{Can GADTs be used to prove type inequalities in GHC?}
+\input{latex/refute-equation.tex}
+
+\section{Implementing a zipper for length-indexed lists}
+\input{latex/vector-zipper.tex}
+
+\section{Monoid for integers modulo}
+\input{latex/integers-modulo.tex}
+
+\section{Are there non-trivial Foldable or Traversable instances that don't look like containers?}
+\input{latex/normal-traversable.tex}
+
+\section{Are GHC's Type Famlies An Example of System F-omega?}
+\input{latex/type-fam-f-omega.tex}
+
+\section{How to derive Eq for a GADT with a non-* kinded phantom type parameter}
+\input{latex/gadt-eq.tex}
+
+\section{Do all Type Classes in Haskell Have a Category Theoretic Analogue?}
+\input{latex/cat-classes.tex}
+
+\section{Haskell type resolution in Type Classes (Generator, Comonad)}
+\input{latex/generator-comonad.tex}
+
+\section{Prove idempotency of type-level disjunction}
+\input{latex/type-level-or.tex}
+
+\section{Recursively defined instances and constraints}
+\input{latex/recursive-instances.tex}
+
+\section{How can I get the length of dependently typed interval?}
+\input{latex/interval.tex}
+
+\section{How to make catamorphisms work with parameterized/indexed types?}
+\input{latex/indexed-cata.tex}
+
+\section{Constraining Constructors in a Signature}
+\input{latex/constraining-constructors.tex}
+
+\section{Standard name of a sum type like Either but for 3 cases?}
+\input{latex/sum-from-list.tex}
+
+\section{How to specify the type for a heterogenous collection in a GADT formulated AST?}
+\input{latex/typed-het-collection.tex}
+
+\section{Type-threaded heterogenous lists and defaulting(?) with type families?}
+\input{latex/kleene-star-gadt.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Type Theory}
+
+\section{What is the combinatory logic equivalent of intuitionistic type theory?}
+\input{latex/combinatory-tt.tex}
+
+\section{Do Hask or Agda have equalisers?}
+\input{latex/equalisers.tex}
+
+\section{Why do we need containers?}
+\input{latex/need-containers.tex}
+
+\section{To what extent are Applicative/Monad instances uniquely determined?}
+\input{latex/find-applicatives.tex}
+
+\section{Pattern matching in Observational Type Theory}
+\input{latex/pattern-match-ott.tex}
+
+\section{Provable coherence in OTT}
+\input{latex/coherence-ott.tex}
+
+\section{How to solve goals with invalid type equalities in Coq?}
+\input{latex/coq-type-inequality.tex}
+
+\section{Is it possible to express the type of balanced untagged binary trees on the calculus of constructions?}
+\input{latex/church-balanced-trees.tex}
+
+
+\end{document}

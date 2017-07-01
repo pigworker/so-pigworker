@@ -1,0 +1,5 @@
+I just thought I should clarify that the version with exercises and "Idioms" in the title is a rather *earlier* draft of the paper which eventually appeared in JFP. At that time, I mistakenly thought that colists (by which I mean possibly infinite, possibly finite lists) were a monad in a way which corresponds to zapp: there is a plausible candidate for the join (alluded to in other answers) but Jeremy Gibbons was kind enough to point out to us that it does not satisfy the monad laws. The counterexamples involve "ragged" lists of lists with varying finite lengths. Correspondingly, in the JFP article, we stood corrected. (We were rather happy about it, because we love to find applicative functors whose (<*>) is not the ap of a Monad.)
+
+The necessarily infinite lists (i.e. *streams*), by ruling out the ragged cases, do indeed form a monad whose ap behaves like zapp. For a clue, note that Stream x is isomorphic to Nat -> x.
+
+My apologies for the confusion. It's sometimes dangerous leaving old, unfinished drafts (replete with errors) lying (ha ha) around on the web.

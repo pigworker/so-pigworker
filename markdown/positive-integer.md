@@ -1,0 +1,11 @@
+I would be failing in my duty as his supervisor if I failed to plug Adam Gundry's [Inch][1]  preprocessor, which manages integer constraints for Haskell.
+
+Smart constructors and abstraction barriers are all very well, but they push too much testing to run time and don't allow for the possibility that you might actually know what you're doing in a way that checks out statically, with no need for `Maybe` padding. (A pedant writes. The author of another answer appears to suggest that 0 is positive, which some might consider contentious. Of course, the truth is that we have uses for a variety of lower bounds, 0 and 1 both occurring often. We also have some use for upper bounds.)
+
+In the tradition of Xi's DML, Adam's preprocessor adds an extra layer of precision on top of what Haskell natively offers but the resulting code erases to Haskell as is. It would be great if what he's done could be better integrated with GHC, in coordination with the work on type level natural numbers that Iavor Diatchki has been doing. We're keen to figure out what's possible.
+
+To return to the general point, Haskell is currently not sufficiently dependently typed to allow the construction of subtypes by comprehension (e.g., elements of Integer greater than 0), but you can often refactor the types to a more indexed version which admits static constraint. Currently, the *singleton* type construction is the cleanest of the available unpleasant ways to achieve this. You'd need a *kind* of "static" integers, then inhabitants of kind `Integer -> *` capture properties of particular integers such as "having a dynamic representation" (that's the singleton construction, giving each static thing a unique dynamic counterpart) but also more specific things like "being positive".
+
+Inch represents an imagining of what it would be like if you didn't need to bother with the singleton construction in order to work with some reasonably well behaved subsets of the integers. Dependently typed programming is often possible in Haskell, but is currently more complicated than necessary. The appropriate sentiment toward this situation is embarrassment, and I for one feel it most keenly.
+
+  [1]: https://github.com/adamgundry/inch/

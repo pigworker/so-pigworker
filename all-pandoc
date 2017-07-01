@@ -1,0 +1,2 @@
+for file in markdown/*.md; do pandoc $file -f markdown -t latex -o $(echo $file | sed s/markdown/latex/ | sed s/\.md/\.tex/); done
+
