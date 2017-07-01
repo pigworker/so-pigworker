@@ -90,6 +90,9 @@
 \section{What does $\Rightarrow$ mean in a type signature?}
 \input{latex/fat-arrow.tex}
 
+\section{Meaning of {\tt Double} and {\tt Floating} point?}
+\input{latex/double-floating.tex}
+
 \section{Haskell terminology: meaning of type vs. data type, are they synonyms?}
 \input{latex/type-vs-data.tex}
 
@@ -101,6 +104,9 @@
 
 \section{Haskell type system nuances (ambiguity)}
 \input{latex/show-read.tex}
+
+\section{Understanding a case of Haskell Type Ambiguity}
+\input{latex/type-ambiguity.tex}
 
 \section{Why does Haskell use $\to$ instead of $=$?}
 \input{latex/recorde.tex}
@@ -122,6 +128,9 @@
 
 \section{Finding a leaf with value x in a binary tree}
 \input{latex/findpath.tex}
+
+\section{Taking from a list until encountering a duplicate}
+\input{latex/take-until-dup.tex}
 
 \section{RankNTypes and PolyKinds (quantifier alternation issues)}
 \input{latex/rankn-explicit.tex}
@@ -169,6 +178,13 @@
 \section{Complex pattern matching}
 \input{latex/complex-patterns.tex}
 
+\section{How to return an element before I entered?}
+\input{latex/as-pattern-example.tex}
+
+\section{Buzzard Bazooka Zoom}
+\input{latex/buzzard-bazooka-zoom.tex}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Recursion}
@@ -197,6 +213,12 @@
 \section{Monoidal folds on fixed points}
 \input{latex/monoidal-fold-fix.tex}
 
+\section{List Created Evaluating List Elements}
+\input{latex/chain-algebra.tex}
+
+\section{Functions of GADTs}
+\input{latex/functions-of-gadts.tex}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Applicative Functors}
@@ -219,8 +241,14 @@
 \section{Parsec: Applicatives vs Monads}
 \input{latex/parsec-appl-monad.tex}
 
+\section{Refactoring do notation into applicative style}
+\input{latex/refactor-monad-appl.tex}
+
 \section{Zip with default values instead of dropping values?}
 \input{latex/padme-applicative.tex}
+
+\section{{\tt sum3} with {\tt zipWith3} in Haskell}
+\input{latex/sum3-zipwith3.tex}
 
 \section{What is the 'Const' applicative functor useful for?}
 \input{latex/const-appl.tex}
@@ -248,6 +276,9 @@
 
 \section{Serialised Diagonalisation}
 \input{latex/serial-diag.tex}
+
+\section{Applicative style for infix operators?}
+\input{latex/infix-appl.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -408,6 +439,12 @@
 \section{Type-threaded heterogenous lists and defaulting(?) with type families?}
 \input{latex/kleene-star-gadt.tex}
 
+\section{Constructor that lifts (via DataKinds) to $\ast\to A$}
+\input{latex/constructor-packs-types.tex}
+
+\section{How should the general type of a ``lemma'' function be understood?}
+\input{latex/lemma-function.tex}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Type Theory}
@@ -435,6 +472,9 @@
 
 \section{Is it possible to express the type of balanced untagged binary trees on the calculus of constructions?}
 \input{latex/church-balanced-trees.tex}
+
+\section{Agda-like programming in Coq/Proof General?}
+\input{latex/agda-in-coq.tex}
 
 
 \end{document}
