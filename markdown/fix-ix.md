@@ -22,6 +22,8 @@ To exploit the choice of substructure sort, we'll need a kind of type-level case
   1. we need it to be partially applied, and that's not allowed;
   2. we need a bit at run time to tell us which sort is present.
 
+<!-- gaah -->
+
     data Case :: (i -> *) -> (j -> *) -> (Either i j -> *)  where
       CaseL :: p i -> Case p q (Left i)
       CaseR :: q j -> Case p q (Right j)
