@@ -1,0 +1,5 @@
+Haskell's type-level language is a purely first-order language, in which "application" is just another constructor, rather than a thing which computes. There are binding constructs, like `forall`, but the notion of equality for type-level stuff is fundamentally mere alpha-equivalence: structural up to renaming of bound variables. Indeed, the whole of our constructor-class machinery, monads, etc relies on being able to take an application `m v` apart unambiguously.
+
+Type-level functions don't really live in the type-level language as first-class citizens: only their full applications do. We end up with an equational (for the `~` notion of equality) theory of type-level expressions in which constraints are expressed and solved, but the underlying notion of *value* that these expressions denote is always first-order, and thus always equippable with equality.
+
+Hence it always makes sense to interpret repeated pattern variables by a structural equality test, which is exactly how pattern matching was designed in its original 1969 incarnation, as an extension to another language rooted in a fundamentally first-order notion of value, LISP.
