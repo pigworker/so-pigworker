@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass{book}%[ebook,oneside,openany,oldfontcommands]{memoir}
 \usepackage{a4wide}
 \usepackage{palatino}
 \usepackage{url}
@@ -57,7 +57,7 @@
 \section{What does () mean in Haskell?}
 \input{latex/unit-boring.tex}
 
-\section{Implement the function {\tt lines} in Haskell}
+\section{Implement the function {\texttt{lines}} in Haskell}
 \input{latex/lines-foldr.tex}
 
 \section{Boolean Expression evaluation (subtle type error)}
@@ -93,7 +93,7 @@
 \section{What does $\Rightarrow$ mean in a type signature?}
 \input{latex/fat-arrow.tex}
 
-\section{Meaning of {\tt Double} and {\tt Floating} point?}
+\section{Meaning of {\texttt{Double}} and {\texttt{Floating}} point?}
 \input{latex/double-floating.tex}
 
 \section{Haskell terminology: meaning of type vs. data type, are they synonyms?}
@@ -120,7 +120,7 @@
 \section{Functor type variables for Flip data type}
 \input{latex/functor-flip.tex}
 
-\section{Why does {\tt product []} return 1?}
+\section{Why does {\texttt{product []}} return 1?}
 \input{latex/empty-product.tex}
 
 \section{Minimum of Two Maybes}
@@ -259,7 +259,7 @@
 \section{Zip with default values instead of dropping values?}
 \input{latex/padme-applicative.tex}
 
-\section{{\tt sum3} with {\tt zipWith3} in Haskell}
+\section{{\texttt{sum3}} with {\texttt{zipWith3}} in Haskell}
 \input{latex/sum3-zipwith3.tex}
 
 \section{What is the 'Const' applicative functor useful for?}
@@ -280,7 +280,7 @@
 \section{Does this simple Haskell function already have a well-known name? (strength)}
 \input{latex/strength-sequence.tex}
 
-\section{Why is{\tt ((,) r)} a Functor that is NOT an Applicative?}
+\section{Why is{\texttt{((,) r)}} a Functor that is NOT an Applicative?}
 \input{latex/no-pair-appl.tex}
 
 \section{Applicative Rewriting (for reader)}
@@ -339,13 +339,13 @@
 \section{Splitting a List}
 \input{latex/splitting-list.tex}
 
-\section{{\tt nub} as a List Comprehension}
+\section{{\texttt{nub}} as a List Comprehension}
 \input{latex/nub-comprehension.tex}
 
 \section{How to make a binary tree zipper an instance of Comonad?}
 \input{latex/btree-zipper.tex}
 
-\section{What's the {\tt absurd} function in Data.Void useful for?}
+\section{What's the {\texttt{absurd}} function in Data.Void useful for?}
 \input{latex/absurd-useful.tex}
 
 \section{Writing cojoin or cobind for n-dimensional grids}
