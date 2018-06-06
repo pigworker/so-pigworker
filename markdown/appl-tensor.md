@@ -1,10 +1,12 @@
-Perhaps the monoid you're looking for is this one, strangely missing from the library.
+Perhaps the monoid you're looking for is this one.
 
     newtype AppM f m = AppM (f m) deriving Show
 
     instance (Applicative f, Monoid m) => Monoid (AppM f m) where
       mempty                      = AppM (pure mempty)
       mappend (AppM fx) (AppM fy) = AppM (pure mappend <*> fx <*> fy)
+
+As a comment, below, observes, it can be found in the [reducers](https://hackage.haskell.org/package/reducers-3.12.1/docs/Data-Semigroup-Applicative.html#t:Ap) library under the name `Ap`. It's fundamental to `Applicative`, so let's unpack it.
 
 Note, in particular, that because `()` is trivially a `Monoid`, `AppM f ()` is a `Monoid`, too. And that's the monoid lurking behind `Applicative f`.
 
@@ -107,7 +109,7 @@ What on earth does that mean?
 
   * you choose an outer shape
   * you choose an inner shape for each outer position
-  * an composite position is then the pair of an outer position and an inner position appropriate to the inner shape that sits there
+  * a composite position is then the pair of an outer position and an inner position appropriate to the inner shape that sits there
 
 Or, in Hancock
 
@@ -119,7 +121,7 @@ Or, more blatantly
 
   * when you make a list of lists, the inner lists can have different lengths
 
-The `join` of a `Monad` flattens a composition. Lurking behind it is not just a monoid on shapes, but an *integration* operator in
+The `join` of a `Monad` flattens a composition. Lurking behind it is not just a monoid on shapes, but an *integration* operator. That is,
 
     join :: ((s <| p) . (s <| p)) x -> (s <| p) x
 
@@ -139,17 +141,17 @@ The tensor (also due to Hancock) of two containers is given by
 
 That is
 
-    * you choose two shapes
-    * a position is then a pair of positions, one for each shape
+  * you choose two shapes
+  * a position is then a pair of positions, one for each shape
 
 or
 
-    * you choose two commands, without seeing any responses
-    * a response is then the pair of responses
+  * you choose two commands, without seeing any responses
+  * a response is then the pair of responses
 
 or
 
-    * `[] >< []` is the type of *rectangular matrices*: the &lsquo;inner&rsquo; lists must all have the same length
+  * `[] >< []` is the type of *rectangular matrices*: the &lsquo;inner&rsquo; lists must all have the same length
 
 The latter is a clue to why `><` is very hard to get your hands on in Haskell, but easy in the dependently typed setting.
 
