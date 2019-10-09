@@ -17,7 +17,7 @@ Now let us check that a given tree satisfies the requirements of being both in o
 
     ordBetween :: Ord a => TopBot a -> TopBot a -> BinaryTree a -> Bool
       -- tighten the demanded bounds, left and right of any Node
-    ordBetween lo hi (Node l x r) = ordBetween lo (Val x) l && ordBetween (Val x) hi l
+    ordBetween lo hi (Node l x r) = ordBetween lo (Val x) l && ordBetween (Val x) hi r
       -- check that the demanded bounds are in order when we reach Null
     ordBetween lo hi Null         = lo <= hi
 
